@@ -1,0 +1,52 @@
+---
+title: "Large-scale models and simulation methods"
+subtitle: "UGE: M2 SIA - Project Report"
+authors:
+  - name: "Luca Uckermann"
+    affiliation:
+      - id: THK
+        name: "University of Applied Sciences (TH Köln)"
+        city: "Cologne"
+        country: "Germany"
+    corresponding: true
+    orcid: "0009-0005-2957-6331"
+  - name: "Nikethan"
+    affiliation:
+      - id: UGE
+        name: "Gustave Eiffel University"
+        city: "Paris"
+        country: "France"
+    corresponding: true
+  - name: "Adel"
+    affiliation:
+      - ref: UGE
+    corresponding: true
+  - name: "Cong Son"
+    affiliation:
+      - id: CSU
+        name: "Cong Son's University"
+    corresponding: true
+bibliography: references.bib
+date: last-modified
+number-sections: true
+link-citations: true
+execute: 
+  eval: true
+  echo: true
+  output: true
+  warning: false
+  error: false
+  include: true
+
+abstract: |
+  Abstract
+---
+
+# Introduction
+
+Hello World! [@test]
+
+# References
+
+::: {#refs}
+:::
