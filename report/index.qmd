@@ -9,6 +9,7 @@ authors:
         city: "Cologne"
         country: "Germany"
     corresponding: true
+    email: "luca_simon.uckermann@smail.th-koeln.de"
     orcid: "0009-0005-2957-6331"
   - name: "Nikethan"
     affiliation:
@@ -17,6 +18,7 @@ authors:
         city: "Paris"
         country: "France"
     corresponding: true
+    email: "nimalakumaran@edu.univ-eiffel.fr"
   - name: "Adel"
     affiliation:
       - ref: UGE
@@ -26,6 +28,7 @@ authors:
       - id: CSU
         name: "Cong Son's University"
     corresponding: true
+    email: "cong-son.duong@edu.univ-eiffel.fr"
 bibliography: references.bib
 date: last-modified
 number-sections: true
