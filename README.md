@@ -5,6 +5,22 @@ Large-scale models and simulation methods
 Report available at:\
 https://luckerma.github.io/lsmsm_project/
 
+## Setup and Run
+
+### Installation (Conda)
+
+```bash
+conda env create -f environment.yml -n lsmsm
+```
+
+### Run (Jupyter)
+
+```bash
+conda activate lsmsm
+```
+
+Run `project.ipynb` in Jupyter.
+
 ## Report (Quarto)
 
 ### Preview Report (HTML)
