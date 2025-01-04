@@ -47,25 +47,123 @@ This report conducts an agent-based transport simulation in France. The study ar
 
 # Region
 
+The chosen *department* in France outside the Île-de-France region is Calvados with the ID *14* in the INSEE Census dataset.
+
 ## Study Area
+
+1. The length of the dataframe for this department is **171834**. Where each row represents an observation.
+2. The weighted sum is **695131.5553559497**. Which stands for the total population in the department.
+3. The dataframe has **18** municipalities: ['ZZZZZ' '14047' '14225' '14271' '14174' '14258' '14167' '14327' '14715' '14333' '14301' '14341' '14437' '14181' '14366' '14488' '14762' '14118']. But after subtracting the 'ZZZZZ' municipality, there are **17** left.
+
+![Map of Calvados inside France](resources/1_1_map_of_study_area.png){#fig-map-of-study-area}
+
+@fig-map-of-study-area shows the map of France with the Calvados department highlighted in blue.
 
 ## Territorial Analysis I
 
+![Age Distribution](resources/1_2_age_distribution.png){#fig-age-distribution}
+
+@fig-age-distribution shows the age distribution of the population, with *43* as the average age.
+
+![Age per Municipality](resources/1_2_age_per_mun.png){#fig-age-per-mun}
+
+@fig-age-per-mun shows the age distribution per municipality:
+
+- **14327**: *38.80* (youngest)
+- **14715**: *53.34* (oldest)
+
+![Socio-Professional Distribution](resources/1_2_csp_distribution.png){#fig-csp-distribution}
+
+@fig-csp-distribution shows the socio-professional distribution of the population.
+
+![Socio-Professional Distribution in *14327*](resources/1_2_csp_distribution_14327.png){#fig-csp-distribution-14327}
+
+![Socio-Professional Distribution in *14715*](resources/1_2_csp_distribution_14715.png){#fig-csp-distribution-14715}
+
+![Socio-Professional Distribution in *14762*](resources/1_2_csp_distribution_14762.png){#fig-csp-distribution-14762}
+
+@fig-csp-distribution-14327, @fig-csp-distribution-14715 and @fig-csp-distribution-14762 show the socio-professional distribution for the municipalities *14327*, *14715* and *14762* respectively. All of the figures are quite different to the overall distribution (@fig-csp-distribution). In *14327*, the gap between "Autres" and "Retraités" is bigger than in the overall distribution, furthermore there are no "Agriculteurs". In comparison in *14715*, there are more "Retraités" than "Autres" making them the biggest group, again there are no "Agriculteurs". In *14762* the "Retraités" are the biggest group, followed by "Autres" and "Ouvriers", which again differs from the overall distribution.
+
 ## Territorial Analysis II
+
+![Working Population Distribution](resources/1_3_working_population.png){#fig-working-population}
+
+@fig-working-population shows the working population distribution by municipality.
+
+XXX TODO: Remove ZZZZZ XXX
+
+![Employees per Municipality](resources/1_3_employees_by_mun.png){#fig-employees-by-mun}
+
+@fig-employees-by-mun shows the number of employees per municipality.
+
+![Difference between Working Population and Employees](resources/1_3_diff_by_mun.png){#fig-diff-by-mun}
+
+@fig-diff-by-mun shows a map indicating the net difference between the working population and the number of employees per municipality:
+
+- **14437**: ~*-5795.92* (largest deficit)
+- **14118**: ~*10351.57* (largest surplus)
 
 # Trip
 
 ## Production
 
+A total of **98841.5523660502** trips are generated for the Calvados department.
+
+![Generated Trips per CSP](resources/2_1_generated_trips.png){#fig-generated-trips}
+
+@fig-generated-trips shows the generated trips per socio-professional category.
+
+![Generated Trips per IRIS](resources/2_1_trips_map.png){#fig-trips-map}
+
+@fig-trips-map shows the generated trips per IRIS.
+
 ## Attraction
 
+$$
+N = \min(0.7 \times \text{total\_employment}, 0.7 \times \text{total\_generated\_trips})
+$$ {#eq-n-value}
+
+@eq-n-value calculates the total number of commuters: **69189.08665623513**.
+
+![Arriving Trips for each Municipality](resources/2_2_arriving_trips.png){#fig-arriving-trips}
+
+@fig-arriving-trips shows the arriving trips for each municipality.
+
 ## Distribution
+
+![Distance Matrix](resources/2_3_distance_matrix.png){#fig-distance-matrix}
+
+@fig-distance-matrix shows the distance matrix between the municipalities.
+
+XXX TODO: RESULTING FLOWS XXX
+
+![Top 10 Pairs with largest Flows](resources/2_3_largest_flows.png){#fig-largest-flows}
+
+@fig-largest-flows shows the top 10 pairs with the largest flows.
+
+XXX TODO: NAME THEM XXX
 
 # Simulation
 
 ## Disaggregation
 
+![Generated Trip Pairs](resources/3_1_generated_trip_paris.png){#fig-generated-trip-pairs}
+
+@fig-generated-trip-pairs shows the generated trip pairs, connecting origin and destination with a line.
+
+![Departure Time Distribution](resources/3_1_departure_times.png){#fig-departure-times}
+
+![Departure Time CDF](resources/3_1_departure_times_cdf.png){#fig-departure-times-cdf}
+
+@fig-departure-times shows the distribution of departure times, while @fig-departure-times-cdf shows the cumulative distribution function of the departure times.
+
 ## Routing
+
+![Route Network](resources/3_2_route_network.png){#fig-route-network}
+
+@fig-route-network shows the extracted OpenStreetMap route network for the Calvados department.
+
+XXX TODO: PERFORM ROUTING XXX
 
 # References
 
