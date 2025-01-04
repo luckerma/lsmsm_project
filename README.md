@@ -1,6 +1,6 @@
 # lsmsm_project
 
-Large-scale models and simulation methods
+Large-Scale Models and Simulation Methods - Agent-based Transport Simulation in Calvados, France
 
 Report available at:\
 https://luckerma.github.io/lsmsm_project/
