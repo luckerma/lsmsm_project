@@ -1,6 +1,6 @@
 ---
-title: "Large-scale models and simulation methods"
-subtitle: "UGE: M2 SIA - Project Report"
+title: "Agent-based Transport Simulation in Calvados, France"
+subtitle: "UGE: M2 SIA - LSMSM Project Report"
 authors:
   - name: "Luca Uckermann"
     affiliation:
@@ -11,24 +11,25 @@ authors:
     corresponding: true
     email: "luca_simon.uckermann@smail.th-koeln.de"
     orcid: "0009-0005-2957-6331"
-  - name: "Nikethan"
+  - name: "Nikethan Nimalakumaran"
     affiliation:
       - id: UGE
-        name: "Gustave Eiffel University"
-        city: "Paris"
+        name: "Université Gustave Eiffel"
+        city: "Champs-sur-Marne"
         country: "France"
     corresponding: true
     email: "nimalakumaran@edu.univ-eiffel.fr"
-  - name: "Adel"
+  - name: "Cong Son Duong"
     affiliation:
       - ref: UGE
     corresponding: true
-  - name: "Cong Son"
-    affiliation:
-      - id: CSU
-        name: "Cong Son's University"
-    corresponding: true
     email: "cong-son.duong@edu.univ-eiffel.fr"
+    orcid: "0000-0003-1823-8992"
+  - name: "Mohammed Adel Djelloul Abbou"
+    affiliation:
+      - ref: UGE
+    corresponding: true
+    email: "djelloulabbou@edu.univ-eiffel.fr"
 bibliography: references.bib
 date: last-modified
 number-sections: true
@@ -40,14 +41,31 @@ execute:
   warning: false
   error: false
   include: true
-
-abstract: |
-  Abstract
 ---
 
-# Introduction
+This report conducts an agent-based transport simulation in France. The study area is Calvados, a department in the Normandy region. The simulation is based on the production-attraction-distribution model. The data sources include the INSEE Census [@inseeCensus], IGN [@ign], INSEE Aggregated [@inseeAggregated], URSSAF [@urssaf] and Geofabrik [@geofabrik]. Before the simulation, which consists of disaggregation and routing, a territorial analysis is carried out and the necessary trips are generated.
 
-Hello World! [@test]
+# Region
+
+## Study Area
+
+## Territorial Analysis I
+
+## Territorial Analysis II
+
+# Trip
+
+## Production
+
+## Attraction
+
+## Distribution
+
+# Simulation
+
+## Disaggregation
+
+## Routing
 
 # References
 
