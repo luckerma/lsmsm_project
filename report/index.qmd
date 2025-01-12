@@ -90,8 +90,6 @@ The chosen *department* in France outside the Île-de-France region is Calvados 
 
 @fig-working-population shows the working population distribution by municipality.
 
-XXX TODO: Remove ZZZZZ XXX
-
 ![Employees per Municipality](resources/1_3_employees_by_mun.png){#fig-employees-by-mun}
 
 @fig-employees-by-mun shows the number of employees per municipality.
@@ -163,7 +161,13 @@ XXX TODO: NAME THEM XXX
 
 @fig-route-network shows the extracted OpenStreetMap route network for the Calvados department.
 
-XXX TODO: PERFORM ROUTING XXX
+![Top 5 Generated Routes](resources/3_2_top_routes.png){#fig-top-routes}
+
+@fig-top-routes shows the top 5 generated routes for the trip pairs. As "u" and "v" are the edge IDs and "count" is the number of trips that flow through these edges.
+
+![Generated Routes](resources/3_2_generated_routes.png){#fig-generated-routes}
+
+@fig-generated-routes shows the generated routes for the trip pairs on the map.
 
 # References
 
