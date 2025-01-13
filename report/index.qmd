@@ -133,7 +133,11 @@ $$ {#eq-n-value}
 
 @fig-distance-matrix shows the distance matrix between the municipalities.
 
-XXX TODO: RESULTING FLOWS XXX
+![Friction Matrix](resources/2_3_friction_matrix.png){#fig-friction-matrix}
+
+@fig-friction-matrix shows the friction matrix between the municipalities.
+
+![Flow Matrix](resources/2_3_flow_matrix.png){#fig-flow-matrix}
 
 ![Top 10 Pairs with largest Flows](resources/2_3_largest_flows.png){#fig-largest-flows}
 
