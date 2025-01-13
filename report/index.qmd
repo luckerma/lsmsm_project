@@ -67,14 +67,14 @@ The chosen *department* in France outside the Île-de-France region is Calvados 
 
 ![Age per Municipality](resources/1_2_age_per_mun.png){#fig-age-per-mun}
 
-@fig-age-per-mun shows the age distribution per municipality:
+@fig-age-per-mun shows the age distribution per municipality ranging from about *38* to about *54* years (see the scale on the right):
 
 - **14327**: *38.80* (youngest)
 - **14715**: *53.34* (oldest)
 
 ![Socio-Professional Distribution](resources/1_2_csp_distribution.png){#fig-csp-distribution}
 
-@fig-csp-distribution shows the socio-professional distribution of the population.
+@fig-csp-distribution shows the socio-professional distribution of the population. With over *200k* people, "Autres" is the largest group, followed by "Retraités". "Agriculteurs" is the smallest group with only about *5k* people.
 
 ![Socio-Professional Distribution in *14327*](resources/1_2_csp_distribution_14327.png){#fig-csp-distribution-14327}
 
@@ -88,11 +88,11 @@ The chosen *department* in France outside the Île-de-France region is Calvados 
 
 ![Working Population Distribution](resources/1_3_working_population.png){#fig-working-population}
 
-@fig-working-population shows the working population distribution by municipality.
+@fig-working-population shows the working population distribution by municipality. For this figure the "ZZZZZ" municipality was excluded as it is not a real municipality, so it would adversely affect the results. For the *17* remaining municipalities, the sum of the working population is *~113k*. Municipality *1418* directly catches the eye with a working population of over *45k*, which is around *40%* of the total working population. The rest is more evenly distributed with the smallest working population in municipality *14715* with *~1.8k*.
 
 ![Employees per Municipality](resources/1_3_employees_by_mun.png){#fig-employees-by-mun}
 
-@fig-employees-by-mun shows the number of employees per municipality.
+@fig-employees-by-mun shows the number of employees per municipality. In comparison to @fig-working-population, the focus is on the job market. For example if a person travels to another municipality for work, they are counted in the working population of the municipality they live in, but in the employees of the municipality they work in. 
 
 ![Difference between Working Population and Employees](resources/1_3_diff_by_mun.png){#fig-diff-by-mun}
 
