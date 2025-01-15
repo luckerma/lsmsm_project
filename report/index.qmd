@@ -59,6 +59,7 @@ The chosen *department* in France outside the Île-de-France region is Calvados 
 
 @fig-map-of-study-area shows the map of France with the Calvados department highlighted in blue. Calvados is located in the northwest of France.
 
+{{< pagebreak >}}
 ## Territorial Analysis I
 
 ![Age Distribution](./resources/1_2_age_distribution.png){#fig-age-distribution}
@@ -84,6 +85,7 @@ The chosen *department* in France outside the Île-de-France region is Calvados 
 
 @fig-csp-distribution-14327, @fig-csp-distribution-14715 and @fig-csp-distribution-14762 show the socio-professional distribution for municipalities *14327*, *14715* and *14762* respectively. All figures are quite different from the overall distribution (@fig-csp-distribution). In *14327*, the gap between "Autres" and "Retraités" is larger than in the overall distribution and there are no "Agriculteurs". In comparison, in *14715*, there are more "Retraités" than "Autres" making them the largest group, again there are no "Agriculteurs". In *14762* the "Retraités" are the largest group, followed by "Autres" and "Ouvriers", which again differs from the overall distribution.
 
+{{< pagebreak >}}
 ## Territorial Analysis II
 
 ![Working Population Distribution](./resources/1_3_working_population.png){#fig-working-population}
@@ -101,6 +103,7 @@ The chosen *department* in France outside the Île-de-France region is Calvados 
 - **14437**: ~*-5795.92* (largest deficit)
 - **14118**: ~*10351.57* (largest surplus)
 
+{{< pagebreak >}}
 # Trip
 
 ## Production
@@ -115,13 +118,14 @@ A total of **98841.5523660502** trips are generated for the Calvados department.
 
 @fig-trips-map shows the generated trips per IRIS. The municipality boundaries are shown in red and the number of trips is indicated by the area color of each municipality. A closer looks reveals that the municipalities colored in @fig-diff-by-mun are the ones colored here. Municipality *14118* clearly stands out with the most trips as it is colored in red.
 
+{{< pagebreak >}}
 ## Attraction
 
 $$
 N = \min(0.7 \times \text{total\_employment}, 0.7 \times \text{total\_generated\_trips})
 $$ {#eq-n-value}
 
-@eq-n-value calculates the total number of commuters: **69189.08665623513**.
+Equation @eq-n-value calculates the total number of commuters: **69189.08665623513**.
 
 ![Arriving Trips for each Municipality](./resources/2_2_arriving_trips.png){#fig-arriving-trips}
 
@@ -131,6 +135,7 @@ $$ {#eq-n-value}
 
 In preparation for trip distribution, the demand is scaled to match the total number of commuters. @fig-scaled-demand shows the scaled demand for each municipality.
 
+{{< pagebreak >}}
 ## Distribution
 
 ![Distance Matrix](./resources/2_3_distance_matrix.png){#fig-distance-matrix}
@@ -149,6 +154,7 @@ In preparation for trip distribution, the demand is scaled to match the total nu
 
 @fig-largest-flows XXX TODO: NAME THEM XXX
 
+{{< pagebreak >}}
 # Simulation
 
 ## Disaggregation
@@ -163,6 +169,7 @@ In preparation for trip distribution, the demand is scaled to match the total nu
 
 @fig-departure-times shows the distribution of departure times, while @fig-departure-times-cdf shows the cumulative distribution function of departure times. The departure times follow a normal distribution with a peak around *8:00* and the first and last trips around *4:00* and *12:00* respectively.
 
+{{< pagebreak >}}
 ## Routing
 
 ![Route Network](./resources/3_2_route_network.png){#fig-route-network}
@@ -183,8 +190,6 @@ In preparation for trip distribution, the demand is scaled to match the total nu
 
 @fig-generated-routes shows the final generated routes for the trip pairs. Most of them are colored purple, indicating that only a few trips flow through them. But some routes are blue or even green and yellow. This indicates that many trips flow through them.
 
-{{< pagebreak >}}
-{{< pagebreak >}}
 # References
 
 ::: {#refs}
