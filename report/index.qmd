@@ -119,7 +119,7 @@ A total of **98841.5523660502** trips are generated for the Calvados department.
 
 ![Generated Trips per IRIS](./resources/2_1_trips_map.png){#fig-trips-map}
 
-@fig-trips-map shows the generated trips per IRIS. The municipality boundaries are shown in red and the number of trips is indicated by the area color of each municipality. A closer looks reveals that the municipalities colored in @fig-diff-by-mun are the ones colored here. Municipality _14118_ clearly stands out with the most trips as it is colored in red.
+@fig-trips-map shows the generated trips per IRIS. The municipality boundaries are shown in red and the number of trips is indicated by the area color of each municipality. A closer look reveals that the municipalities colored in @fig-diff-by-mun are the ones colored here. Municipality _14118_ clearly stands out with the most trips as it is colored in red.
 
 {{< pagebreak >}}
 
