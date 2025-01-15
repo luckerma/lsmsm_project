@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2025-01-13">
+<meta name="dcterms.date" content="2025-01-15">
 
 <title>Agent-based Transport Simulation in Calvados, France</title>
 <style>
@@ -93,15 +93,17 @@ window.Quarto = {
 <meta name="citation_author" content="Nikethan Nimalakumaran">
 <meta name="citation_author" content="Cong Son Duong">
 <meta name="citation_author" content="Mohammed Adel Djelloul Abbou">
-<meta name="citation_publication_date" content="2025-01-13">
-<meta name="citation_cover_date" content="2025-01-13">
+<meta name="citation_publication_date" content="2025-01-15">
+<meta name="citation_cover_date" content="2025-01-15">
 <meta name="citation_year" content="2025">
-<meta name="citation_online_date" content="2025-01-13">
+<meta name="citation_online_date" content="2025-01-15">
 <meta name="citation_language" content="en">
 <meta name="citation_reference" content="citation_title=OpenStreetMap;,citation_author=undefined Geofabrik;,citation_publication_date=2024;,citation_cover_date=2024;,citation_year=2024;,citation_fulltext_html_url=http://download.geofabrik.de/europe/france.html;">
 <meta name="citation_reference" content="citation_title=IRIS;,citation_author=undefined IGN;,citation_publication_date=2021;,citation_cover_date=2021;,citation_year=2021;,citation_fulltext_html_url=https://geoservices.ign.fr/contoursiris;">
 <meta name="citation_reference" content="citation_title=Aggregated;,citation_author=undefined INSEE;,citation_publication_date=2022;,citation_cover_date=2022;,citation_year=2022;,citation_fulltext_html_url=https://www.insee.fr/fr/statistiques/6543200;">
 <meta name="citation_reference" content="citation_title=Census;,citation_author=undefined INSEE;,citation_publication_date=2022;,citation_cover_date=2022;,citation_year=2022;,citation_fulltext_html_url=https://www.insee.fr/fr/statistiques/6544333;">
+<meta name="citation_reference" content="citation_title=Planet dump retrieved from https://planet.osm.org ;,citation_author=OpenStreetMap contributors;,citation_publication_date=2017;,citation_cover_date=2017;,citation_year=2017;,citation_fulltext_html_url=https://www.openstreetmap.org;">
+<meta name="citation_reference" content="citation_title=Osmosis;,citation_author=undefined OpenStreetMap;,citation_publication_date=2024;,citation_cover_date=2024;,citation_year=2024;,citation_fulltext_html_url=https://github.com/openstreetmap/osmosis;">
 <meta name="citation_reference" content="citation_title=Employeurs;,citation_author=undefined URSSAF;,citation_publication_date=2023;,citation_cover_date=2023;,citation_year=2023;,citation_fulltext_html_url=https://open.urssaf.fr/explore/dataset/etablissements-et-effectifs-salaries-au-niveau-commune-x-ape-last/information;">
 </head>
 
@@ -161,7 +163,7 @@ window.Quarto = {
                 <div>
             <div class="quarto-title-meta-heading">Published</div>
             <div class="quarto-title-meta-contents">
-              <p class="date">January 13, 2025</p>
+              <p class="date">January 15, 2025</p>
             </div>
           </div>
           
@@ -212,53 +214,53 @@ window.Quarto = {
   
 
 
-<p>This report conducts an agent-based transport simulation in France. The study area is Calvados, a department in the Normandy region. The simulation is based on the production-attraction-distribution model. The data sources include the INSEE Census <span class="citation" data-cites="inseeCensus">(<a href="#ref-inseeCensus" role="doc-biblioref">INSEE 2022b</a>)</span>, IGN <span class="citation" data-cites="ign">(<a href="#ref-ign" role="doc-biblioref">IGN 2021</a>)</span>, INSEE Aggregated <span class="citation" data-cites="inseeAggregated">(<a href="#ref-inseeAggregated" role="doc-biblioref">INSEE 2022a</a>)</span>, URSSAF <span class="citation" data-cites="urssaf">(<a href="#ref-urssaf" role="doc-biblioref">URSSAF 2023</a>)</span> and Geofabrik <span class="citation" data-cites="geofabrik">(<a href="#ref-geofabrik" role="doc-biblioref">Geofabrik 2024</a>)</span>. Before the simulation, which consists of disaggregation and routing, a territorial analysis is carried out and the necessary trips are generated.</p>
+<p>This report conducts an agent-based transport simulation in France. The study area is Calvados, a department in the Normandy region. The simulation is based on the production-attraction-distribution model. The data sources are INSEE Census <span class="citation" data-cites="inseeCensus">(<a href="#ref-inseeCensus" role="doc-biblioref">INSEE 2022b</a>)</span>, IGN <span class="citation" data-cites="ign">(<a href="#ref-ign" role="doc-biblioref">IGN 2021</a>)</span>, INSEE Aggregated <span class="citation" data-cites="inseeAggregated">(<a href="#ref-inseeAggregated" role="doc-biblioref">INSEE 2022a</a>)</span>, URSSAF <span class="citation" data-cites="urssaf">(<a href="#ref-urssaf" role="doc-biblioref">URSSAF 2023</a>)</span> and Geofabrik <span class="citation" data-cites="geofabrik">(<a href="#ref-geofabrik" role="doc-biblioref">Geofabrik 2024</a>)</span>. Before the simulation, which consists of disaggregation and routing, a territorial analysis is performed and the necessary trips are generated.</p>
 <section id="region" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> Region</h1>
 <p>The chosen <em>department</em> in France outside the Île-de-France region is Calvados with the ID <em>14</em> in the INSEE Census dataset.</p>
 <section id="study-area" class="level2" data-number="1.1">
 <h2 data-number="1.1" class="anchored" data-anchor-id="study-area"><span class="header-section-number">1.1</span> Study Area</h2>
 <ol type="1">
-<li>The length of the dataframe for this department is <strong>171834</strong>. Where each row represents an observation.</li>
-<li>The weighted sum is <strong>695131.5553559497</strong>. Which stands for the total population in the department.</li>
-<li>The dataframe has <strong>18</strong> municipalities: [‘ZZZZZ’ ‘14047’ ‘14225’ ‘14271’ ‘14174’ ‘14258’ ‘14167’ ‘14327’ ‘14715’ ‘14333’ ‘14301’ ‘14341’ ‘14437’ ‘14181’ ‘14366’ ‘14488’ ‘14762’ ‘14118’]. But after subtracting the ‘ZZZZZ’ municipality, there are <strong>17</strong> left.</li>
+<li>The length of the dataframe for this department is <strong>171834</strong>. Each row represents one observation.</li>
+<li>The weighted sum is <strong>695131.5553559497</strong>. Which represents the total population of the department.</li>
+<li>The dataframe has <strong>18</strong> municipalities: [‘ZZZZZ’ ‘14047’ ‘14225’ ‘14271’ ‘14174’ ‘14258’ ‘14167’ ‘14327’ ‘14715’ ‘14333’ ‘14301’ ‘14341’ ‘14437’ ‘14181’ ‘14366’ ‘14488’ ‘14762’ ‘14118’]. But after excluding the ‘ZZZZZ’ municipality, there are <strong>17</strong> left.</li>
 </ol>
 <div id="fig-map-of-study-area" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-map-of-study-area-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="resources/1_1_map_of_study_area.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1: Map of Calvados inside France"><img src="resources/1_1_map_of_study_area.png" class="img-fluid figure-img"></a>
+<a href="./resources/1_1_map_of_study_area.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1: Map of Calvados within France"><img src="./resources/1_1_map_of_study_area.png" class="img-fluid figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-map-of-study-area-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: Map of Calvados inside France
+Figure&nbsp;1: Map of Calvados within France
 </figcaption>
 </figure>
 </div>
-<p><a href="#fig-map-of-study-area" class="quarto-xref">Figure&nbsp;1</a> shows the map of France with the Calvados department highlighted in blue.</p>
+<p><a href="#fig-map-of-study-area" class="quarto-xref">Figure&nbsp;1</a> shows the map of France with the Calvados department highlighted in blue. Calvados is located in the northwest of France.</p>
 </section>
 <section id="territorial-analysis-i" class="level2" data-number="1.2">
 <h2 data-number="1.2" class="anchored" data-anchor-id="territorial-analysis-i"><span class="header-section-number">1.2</span> Territorial Analysis I</h2>
 <div id="fig-age-distribution" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-age-distribution-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="resources/1_2_age_distribution.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure&nbsp;2: Age Distribution"><img src="resources/1_2_age_distribution.png" class="img-fluid figure-img"></a>
+<a href="./resources/1_2_age_distribution.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure&nbsp;2: Age Distribution"><img src="./resources/1_2_age_distribution.png" class="img-fluid figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-age-distribution-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;2: Age Distribution
 </figcaption>
 </figure>
 </div>
-<p><a href="#fig-age-distribution" class="quarto-xref">Figure&nbsp;2</a> shows the age distribution of the population, with <em>43</em> as the average age.</p>
+<p><a href="#fig-age-distribution" class="quarto-xref">Figure&nbsp;2</a> shows the age distribution of the population, with <strong>43</strong> as the average age.</p>
 <div id="fig-age-per-mun" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-age-per-mun-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="resources/1_2_age_per_mun.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figure&nbsp;3: Age per Municipality"><img src="resources/1_2_age_per_mun.png" class="img-fluid figure-img"></a>
+<a href="./resources/1_2_age_per_mun.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figure&nbsp;3: Age per Municipality"><img src="./resources/1_2_age_per_mun.png" class="img-fluid figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-age-per-mun-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;3: Age per Municipality
 </figcaption>
 </figure>
 </div>
-<p><a href="#fig-age-per-mun" class="quarto-xref">Figure&nbsp;3</a> shows the age distribution per municipality ranging from about <em>38</em> to about <em>54</em> years (see the scale on the right):</p>
+<p><a href="#fig-age-per-mun" class="quarto-xref">Figure&nbsp;3</a> shows the age distribution per municipality ranging from about <em>38</em> to about <em>54</em> years (see the scale on the right). Since many municipalities are grouped together as the “ZZZZZ” municipality, there are white gaps in the map. The red line marks the silhouette of the Calvados department. The age distribution is quite different between the municipalities:</p>
 <ul>
 <li><strong>14327</strong>: <em>38.80</em> (youngest)</li>
 <li><strong>14715</strong>: <em>53.34</em> (oldest)</li>
@@ -266,7 +268,7 @@ Figure&nbsp;3: Age per Municipality
 <div id="fig-csp-distribution" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-csp-distribution-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="resources/1_2_csp_distribution.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Figure&nbsp;4: Socio-Professional Distribution"><img src="resources/1_2_csp_distribution.png" class="img-fluid figure-img"></a>
+<a href="./resources/1_2_csp_distribution.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Figure&nbsp;4: Socio-Professional Distribution"><img src="./resources/1_2_csp_distribution.png" class="img-fluid figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-csp-distribution-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;4: Socio-Professional Distribution
@@ -277,7 +279,7 @@ Figure&nbsp;4: Socio-Professional Distribution
 <div id="fig-csp-distribution-14327" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-csp-distribution-14327-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="resources/1_2_csp_distribution_14327.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Figure&nbsp;5: Socio-Professional Distribution in 14327"><img src="resources/1_2_csp_distribution_14327.png" class="img-fluid figure-img"></a>
+<a href="./resources/1_2_csp_distribution_14327.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Figure&nbsp;5: Socio-Professional Distribution in 14327"><img src="./resources/1_2_csp_distribution_14327.png" class="img-fluid figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-csp-distribution-14327-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;5: Socio-Professional Distribution in <em>14327</em>
@@ -287,7 +289,7 @@ Figure&nbsp;5: Socio-Professional Distribution in <em>14327</em>
 <div id="fig-csp-distribution-14715" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-csp-distribution-14715-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="resources/1_2_csp_distribution_14715.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Figure&nbsp;6: Socio-Professional Distribution in 14715"><img src="resources/1_2_csp_distribution_14715.png" class="img-fluid figure-img"></a>
+<a href="./resources/1_2_csp_distribution_14715.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Figure&nbsp;6: Socio-Professional Distribution in 14715"><img src="./resources/1_2_csp_distribution_14715.png" class="img-fluid figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-csp-distribution-14715-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;6: Socio-Professional Distribution in <em>14715</em>
@@ -297,50 +299,50 @@ Figure&nbsp;6: Socio-Professional Distribution in <em>14715</em>
 <div id="fig-csp-distribution-14762" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-csp-distribution-14762-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="resources/1_2_csp_distribution_14762.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Figure&nbsp;7: Socio-Professional Distribution in 14762"><img src="resources/1_2_csp_distribution_14762.png" class="img-fluid figure-img"></a>
+<a href="./resources/1_2_csp_distribution_14762.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Figure&nbsp;7: Socio-Professional Distribution in 14762"><img src="./resources/1_2_csp_distribution_14762.png" class="img-fluid figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-csp-distribution-14762-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;7: Socio-Professional Distribution in <em>14762</em>
 </figcaption>
 </figure>
 </div>
-<p><a href="#fig-csp-distribution-14327" class="quarto-xref">Figure&nbsp;5</a>, <a href="#fig-csp-distribution-14715" class="quarto-xref">Figure&nbsp;6</a> and <a href="#fig-csp-distribution-14762" class="quarto-xref">Figure&nbsp;7</a> show the socio-professional distribution for the municipalities <em>14327</em>, <em>14715</em> and <em>14762</em> respectively. All of the figures are quite different to the overall distribution (<a href="#fig-csp-distribution" class="quarto-xref">Figure&nbsp;4</a>). In <em>14327</em>, the gap between “Autres” and “Retraités” is bigger than in the overall distribution, furthermore there are no “Agriculteurs”. In comparison in <em>14715</em>, there are more “Retraités” than “Autres” making them the biggest group, again there are no “Agriculteurs”. In <em>14762</em> the “Retraités” are the biggest group, followed by “Autres” and “Ouvriers”, which again differs from the overall distribution.</p>
+<p><a href="#fig-csp-distribution-14327" class="quarto-xref">Figure&nbsp;5</a>, <a href="#fig-csp-distribution-14715" class="quarto-xref">Figure&nbsp;6</a> and <a href="#fig-csp-distribution-14762" class="quarto-xref">Figure&nbsp;7</a> show the socio-professional distribution for municipalities <em>14327</em>, <em>14715</em> and <em>14762</em> respectively. All figures are quite different from the overall distribution (<a href="#fig-csp-distribution" class="quarto-xref">Figure&nbsp;4</a>). In <em>14327</em>, the gap between “Autres” and “Retraités” is larger than in the overall distribution and there are no “Agriculteurs”. In comparison, in <em>14715</em>, there are more “Retraités” than “Autres” making them the largest group, again there are no “Agriculteurs”. In <em>14762</em> the “Retraités” are the largest group, followed by “Autres” and “Ouvriers”, which again differs from the overall distribution.</p>
 </section>
 <section id="territorial-analysis-ii" class="level2" data-number="1.3">
 <h2 data-number="1.3" class="anchored" data-anchor-id="territorial-analysis-ii"><span class="header-section-number">1.3</span> Territorial Analysis II</h2>
 <div id="fig-working-population" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-working-population-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="resources/1_3_working_population.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Figure&nbsp;8: Working Population Distribution"><img src="resources/1_3_working_population.png" class="img-fluid figure-img"></a>
+<a href="./resources/1_3_working_population.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Figure&nbsp;8: Working Population Distribution"><img src="./resources/1_3_working_population.png" class="img-fluid figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-working-population-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;8: Working Population Distribution
 </figcaption>
 </figure>
 </div>
-<p><a href="#fig-working-population" class="quarto-xref">Figure&nbsp;8</a> shows the working population distribution by municipality. For this figure the “ZZZZZ” municipality was excluded as it is not a real municipality, so it would adversely affect the results. For the <em>17</em> remaining municipalities, the sum of the working population is <em>~113k</em>. Municipality <em>1418</em> directly catches the eye with a working population of over <em>45k</em>, which is around <em>40%</em> of the total working population. The rest is more evenly distributed with the smallest working population in municipality <em>14715</em> with <em>~1.8k</em>.</p>
+<p><a href="#fig-working-population" class="quarto-xref">Figure&nbsp;8</a> shows the distribution of the working population by municipality. For this figure, the “ZZZZZ” municipality has been excluded again, as it is not a real municipality and would therefore negatively affect the results. For the remaining <em>17</em> municipalities, the total working population is ~<strong>113k</strong>. Municipality <em>1418</em> stands out immediately with a working population of over <em>45k</em>, which is about <em>40%</em> of the total working population. The rest is more evenly distributed with the smallest working population in municipality <em>14715</em> with ~<em>1.8k</em>.</p>
 <div id="fig-employees-by-mun" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-employees-by-mun-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="resources/1_3_employees_by_mun.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9" title="Figure&nbsp;9: Employees per Municipality"><img src="resources/1_3_employees_by_mun.png" class="img-fluid figure-img"></a>
+<a href="./resources/1_3_employees_by_mun.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9" title="Figure&nbsp;9: Employees per Municipality"><img src="./resources/1_3_employees_by_mun.png" class="img-fluid figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-employees-by-mun-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;9: Employees per Municipality
 </figcaption>
 </figure>
 </div>
-<p><a href="#fig-employees-by-mun" class="quarto-xref">Figure&nbsp;9</a> shows the number of employees per municipality. In comparison to <a href="#fig-working-population" class="quarto-xref">Figure&nbsp;8</a>, the focus is on the job market. For example if a person travels to another municipality for work, they are counted in the working population of the municipality they live in, but in the employees of the municipality they work in.</p>
+<p><a href="#fig-employees-by-mun" class="quarto-xref">Figure&nbsp;9</a> shows the number of employees per municipality. In contrast to <a href="#fig-working-population" class="quarto-xref">Figure&nbsp;8</a>, the focus is on the job market. For example, if a person travels to another municipality to work, he is counted in the working population of the municipality where he lives, but in the employees of the municipality where he works. All in all, the two figures look quite similar, but some municipalities are shifted one or two places in their rankings. Only municipality <em>14118</em> has significantly more employees than working population, which is due to the fact that many people from other municipalities work there.</p>
 <div id="fig-diff-by-mun" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-diff-by-mun-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="resources/1_3_diff_by_mun.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10" title="Figure&nbsp;10: Difference between Working Population and Employees"><img src="resources/1_3_diff_by_mun.png" class="img-fluid figure-img"></a>
+<a href="./resources/1_3_diff_by_mun.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10" title="Figure&nbsp;10: Difference between Working Population and Employees"><img src="./resources/1_3_diff_by_mun.png" class="img-fluid figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-diff-by-mun-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;10: Difference between Working Population and Employees
 </figcaption>
 </figure>
 </div>
-<p><a href="#fig-diff-by-mun" class="quarto-xref">Figure&nbsp;10</a> shows a map indicating the net difference between the working population and the number of employees per municipality:</p>
+<p><a href="#fig-diff-by-mun" class="quarto-xref">Figure&nbsp;10</a> shows a map with the net difference (<span class="math inline">\(\text{working population} - \text{employees}\)</span>) per municipality:</p>
 <ul>
 <li><strong>14437</strong>: ~<em>-5795.92</em> (largest deficit)</li>
 <li><strong>14118</strong>: ~<em>10351.57</em> (largest surplus)</li>
@@ -355,25 +357,25 @@ Figure&nbsp;10: Difference between Working Population and Employees
 <div id="fig-generated-trips" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-generated-trips-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="resources/2_1_generated_trips.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11" title="Figure&nbsp;11: Generated Trips per CSP"><img src="resources/2_1_generated_trips.png" class="img-fluid figure-img"></a>
+<a href="./resources/2_1_generated_trips.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11" title="Figure&nbsp;11: Generated Trips per CSP"><img src="./resources/2_1_generated_trips.png" class="img-fluid figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-generated-trips-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;11: Generated Trips per CSP
 </figcaption>
 </figure>
 </div>
-<p><a href="#fig-generated-trips" class="quarto-xref">Figure&nbsp;11</a> shows the generated trips per socio-professional category.</p>
+<p><a href="#fig-generated-trips" class="quarto-xref">Figure&nbsp;11</a> shows the generated trips per socio-professional category in descending order. The “Employés” category has the most trips with <strong><sub>27.7k<strong>, closely followed by the “Intermédiaires” category with </strong></sub>27.4k</strong> trips. The “Agriculteurs” and the “Autres” categories have the fewest trips with <strong>~138</strong> and <strong>0</strong> respectively.</p>
 <div id="fig-trips-map" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-trips-map-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="resources/2_1_trips_map.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12" title="Figure&nbsp;12: Generated Trips per IRIS"><img src="resources/2_1_trips_map.png" class="img-fluid figure-img"></a>
+<a href="./resources/2_1_trips_map.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12" title="Figure&nbsp;12: Generated Trips per IRIS"><img src="./resources/2_1_trips_map.png" class="img-fluid figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-trips-map-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;12: Generated Trips per IRIS
 </figcaption>
 </figure>
 </div>
-<p><a href="#fig-trips-map" class="quarto-xref">Figure&nbsp;12</a> shows the generated trips per IRIS.</p>
+<p><a href="#fig-trips-map" class="quarto-xref">Figure&nbsp;12</a> shows the generated trips per IRIS. The municipality boundaries are shown in red and the number of trips is indicated by the area color of each municipality. A closer looks reveals that the municipalities colored in <a href="#fig-diff-by-mun" class="quarto-xref">Figure&nbsp;10</a> are the ones colored here. Municipality <em>14118</em> clearly stands out with the most trips as it is colored in red.</p>
 </section>
 <section id="attraction" class="level2" data-number="2.2">
 <h2 data-number="2.2" class="anchored" data-anchor-id="attraction"><span class="header-section-number">2.2</span> Attraction</h2>
@@ -384,61 +386,72 @@ N = \min(0.7 \times \text{total\_employment}, 0.7 \times \text{total\_generated\
 <div id="fig-arriving-trips" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-arriving-trips-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="resources/2_2_arriving_trips.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13" title="Figure&nbsp;13: Arriving Trips for each Municipality"><img src="resources/2_2_arriving_trips.png" class="img-fluid figure-img"></a>
+<a href="./resources/2_2_arriving_trips.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13" title="Figure&nbsp;13: Arriving Trips for each Municipality"><img src="./resources/2_2_arriving_trips.png" class="img-fluid figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-arriving-trips-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;13: Arriving Trips for each Municipality
 </figcaption>
 </figure>
 </div>
-<p><a href="#fig-arriving-trips" class="quarto-xref">Figure&nbsp;13</a> shows the arriving trips for each municipality.</p>
+<p><a href="#fig-arriving-trips" class="quarto-xref">Figure&nbsp;13</a> shows the arriving trips for each municipality. This is similar to <a href="#fig-trips-map" class="quarto-xref">Figure&nbsp;12</a>, but the focus is on the arriving trips. Again, the municipality <em>14118</em> stands out with the most arriving trips.</p>
+<div id="fig-scaled-demand" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-scaled-demand-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="./resources/2_2_scaled_demand.png" class="lightbox" data-gallery="quarto-lightbox-gallery-14" title="Figure&nbsp;14: Scaled Demand"><img src="./resources/2_2_scaled_demand.png" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-scaled-demand-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;14: Scaled Demand
+</figcaption>
+</figure>
+</div>
+<p>In preparation for trip distribution, the demand is scaled to match the total number of commuters. <a href="#fig-scaled-demand" class="quarto-xref">Figure&nbsp;14</a> shows the scaled demand for each municipality.</p>
 </section>
 <section id="distribution" class="level2" data-number="2.3">
 <h2 data-number="2.3" class="anchored" data-anchor-id="distribution"><span class="header-section-number">2.3</span> Distribution</h2>
 <div id="fig-distance-matrix" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-distance-matrix-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="resources/2_3_distance_matrix.png" class="lightbox" data-gallery="quarto-lightbox-gallery-14" title="Figure&nbsp;14: Distance Matrix"><img src="resources/2_3_distance_matrix.png" class="img-fluid figure-img"></a>
+<a href="./resources/2_3_distance_matrix.png" class="lightbox" data-gallery="quarto-lightbox-gallery-15" title="Figure&nbsp;15: Distance Matrix"><img src="./resources/2_3_distance_matrix.png" class="img-fluid figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-distance-matrix-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;14: Distance Matrix
+Figure&nbsp;15: Distance Matrix
 </figcaption>
 </figure>
 </div>
-<p><a href="#fig-distance-matrix" class="quarto-xref">Figure&nbsp;14</a> shows the distance matrix between the municipalities.</p>
+<p><a href="#fig-distance-matrix" class="quarto-xref">Figure&nbsp;15</a> shows the distance in meters between each pair of municipalities, with higher values representing more distant municipalities. The diagonal values (distance from a municipality to itself) are zero.</p>
 <div id="fig-friction-matrix" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-friction-matrix-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="resources/2_3_friction_matrix.png" class="lightbox" data-gallery="quarto-lightbox-gallery-15" title="Figure&nbsp;15: Friction Matrix"><img src="resources/2_3_friction_matrix.png" class="img-fluid figure-img"></a>
+<a href="./resources/2_3_friction_matrix.png" class="lightbox" data-gallery="quarto-lightbox-gallery-16" title="Figure&nbsp;16: Friction Matrix"><img src="./resources/2_3_friction_matrix.png" class="img-fluid figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-friction-matrix-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;15: Friction Matrix
+Figure&nbsp;16: Friction Matrix
 </figcaption>
 </figure>
 </div>
-<p><a href="#fig-friction-matrix" class="quarto-xref">Figure&nbsp;15</a> shows the friction matrix between the municipalities.</p>
+<p><a href="#fig-friction-matrix" class="quarto-xref">Figure&nbsp;16</a> represents the resistance effect based on the distance between the municipalities, where higher values indicate lower resistance (closer proximity) and lower values correspond to higher resistance for longer distances.</p>
 <div id="fig-flow-matrix" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-flow-matrix-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="resources/2_3_flow_matrix.png" class="lightbox" data-gallery="quarto-lightbox-gallery-16" title="Figure&nbsp;16: Flow Matrix"><img src="resources/2_3_flow_matrix.png" class="img-fluid figure-img"></a>
+<a href="./resources/2_3_flow_matrix.png" class="lightbox" data-gallery="quarto-lightbox-gallery-17" title="Figure&nbsp;17: Flow Matrix"><img src="./resources/2_3_flow_matrix.png" class="img-fluid figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-flow-matrix-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;16: Flow Matrix
+Figure&nbsp;17: Flow Matrix
 </figcaption>
 </figure>
 </div>
+<p><a href="#fig-flow-matrix" class="quarto-xref">Figure&nbsp;17</a> shows the estimated flows between municipalities based on origin, destination and friction. Higher values indicate stronger flows between certain pairs of municipalities.</p>
 <div id="fig-largest-flows" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-largest-flows-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="resources/2_3_largest_flows.png" class="lightbox" data-gallery="quarto-lightbox-gallery-17" title="Figure&nbsp;17: Top 10 Pairs with largest Flows"><img src="resources/2_3_largest_flows.png" class="img-fluid figure-img"></a>
+<a href="./resources/2_3_largest_flows.png" class="lightbox" data-gallery="quarto-lightbox-gallery-18" title="Figure&nbsp;18: Top 10 Pairs with largest Flows"><img src="./resources/2_3_largest_flows.png" class="img-fluid figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-largest-flows-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;17: Top 10 Pairs with largest Flows
+Figure&nbsp;18: Top 10 Pairs with largest Flows
 </figcaption>
 </figure>
 </div>
-<p><a href="#fig-largest-flows" class="quarto-xref">Figure&nbsp;17</a> shows the top 10 pairs with the largest flows.</p>
-<p>XXX TODO: NAME THEM XXX</p>
+<p><a href="#fig-largest-flows" class="quarto-xref">Figure&nbsp;18</a> XXX TODO: NAME THEM XXX</p>
 </section>
 </section>
 <section id="simulation" class="level1" data-number="3">
@@ -448,71 +461,94 @@ Figure&nbsp;17: Top 10 Pairs with largest Flows
 <div id="fig-generated-trip-pairs" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-generated-trip-pairs-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="resources/3_1_generated_trip_paris.png" class="lightbox" data-gallery="quarto-lightbox-gallery-18" title="Figure&nbsp;18: Generated Trip Pairs"><img src="resources/3_1_generated_trip_paris.png" class="img-fluid figure-img"></a>
+<a href="./resources/3_1_generated_trip_paris.png" class="lightbox" data-gallery="quarto-lightbox-gallery-19" title="Figure&nbsp;19: Generated Trip Pairs"><img src="./resources/3_1_generated_trip_paris.png" class="img-fluid figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-generated-trip-pairs-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;18: Generated Trip Pairs
+Figure&nbsp;19: Generated Trip Pairs
 </figcaption>
 </figure>
 </div>
-<p><a href="#fig-generated-trip-pairs" class="quarto-xref">Figure&nbsp;18</a> shows the generated trip pairs, connecting origin and destination with a line.</p>
+<p><a href="#fig-generated-trip-pairs" class="quarto-xref">Figure&nbsp;19</a> shows the generated trip pairs, connecting origin and destination with a red line.</p>
 <div id="fig-departure-times" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-departure-times-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="resources/3_1_departure_times.png" class="lightbox" data-gallery="quarto-lightbox-gallery-19" title="Figure&nbsp;19: Departure Time Distribution"><img src="resources/3_1_departure_times.png" class="img-fluid figure-img"></a>
+<a href="./resources/3_1_departure_times.png" class="lightbox" data-gallery="quarto-lightbox-gallery-20" title="Figure&nbsp;20: Departure Time Distribution"><img src="./resources/3_1_departure_times.png" class="img-fluid figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-departure-times-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;19: Departure Time Distribution
+Figure&nbsp;20: Departure Time Distribution
 </figcaption>
 </figure>
 </div>
 <div id="fig-departure-times-cdf" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-departure-times-cdf-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="resources/3_1_departure_times_cdf.png" class="lightbox" data-gallery="quarto-lightbox-gallery-20" title="Figure&nbsp;20: Departure Time CDF"><img src="resources/3_1_departure_times_cdf.png" class="img-fluid figure-img"></a>
+<a href="./resources/3_1_departure_times_cdf.png" class="lightbox" data-gallery="quarto-lightbox-gallery-21" title="Figure&nbsp;21: Departure Time CDF"><img src="./resources/3_1_departure_times_cdf.png" class="img-fluid figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-departure-times-cdf-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;20: Departure Time CDF
+Figure&nbsp;21: Departure Time CDF
 </figcaption>
 </figure>
 </div>
-<p><a href="#fig-departure-times" class="quarto-xref">Figure&nbsp;19</a> shows the distribution of departure times, while <a href="#fig-departure-times-cdf" class="quarto-xref">Figure&nbsp;20</a> shows the cumulative distribution function of the departure times.</p>
+<p><a href="#fig-departure-times" class="quarto-xref">Figure&nbsp;20</a> shows the distribution of departure times, while <a href="#fig-departure-times-cdf" class="quarto-xref">Figure&nbsp;21</a> shows the cumulative distribution function of departure times. The departure times follow a normal distribution with a peak around <em>8:00</em> and the first and last trips around <em>4:00</em> and <em>12:00</em> respectively.</p>
 </section>
 <section id="routing" class="level2" data-number="3.2">
 <h2 data-number="3.2" class="anchored" data-anchor-id="routing"><span class="header-section-number">3.2</span> Routing</h2>
 <div id="fig-route-network" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-route-network-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="resources/3_2_route_network.png" class="lightbox" data-gallery="quarto-lightbox-gallery-21" title="Figure&nbsp;21: Route Network"><img src="resources/3_2_route_network.png" class="img-fluid figure-img"></a>
+<a href="./resources/3_2_route_network.png" class="lightbox" data-gallery="quarto-lightbox-gallery-22" title="Figure&nbsp;22: Route Network"><img src="./resources/3_2_route_network.png" class="img-fluid figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-route-network-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;21: Route Network
+Figure&nbsp;22: Route Network
 </figcaption>
 </figure>
 </div>
-<p><a href="#fig-route-network" class="quarto-xref">Figure&nbsp;21</a> shows the extracted OpenStreetMap route network for the Calvados department.</p>
+<p><a href="#fig-route-network" class="quarto-xref">Figure&nbsp;22</a> shows the extracted OpenStreetMap <span class="citation" data-cites="OpenStreetMap">(<a href="#ref-OpenStreetMap" role="doc-biblioref">OpenStreetMap contributors 2017</a>)</span> route network for the Calvados department using the Osmosis tool <span class="citation" data-cites="osmosis">(<a href="#ref-osmosis" role="doc-biblioref">OpenStreetMap 2024</a>)</span>.</p>
 <div id="fig-top-routes" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-top-routes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="resources/3_2_top_routes.png" class="lightbox" data-gallery="quarto-lightbox-gallery-22" title="Figure&nbsp;22: Top 5 Generated Routes"><img src="resources/3_2_top_routes.png" class="img-fluid figure-img"></a>
+<a href="./resources/3_2_top_routes.png" class="lightbox" data-gallery="quarto-lightbox-gallery-23" title="Figure&nbsp;23: Top 5 Generated Routes"><img src="./resources/3_2_top_routes.png" class="img-fluid figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-top-routes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;22: Top 5 Generated Routes
+Figure&nbsp;23: Top 5 Generated Routes
 </figcaption>
 </figure>
 </div>
-<p><a href="#fig-top-routes" class="quarto-xref">Figure&nbsp;22</a> shows the top 5 generated routes for the trip pairs. As “u” and “v” are the edge IDs and “count” is the number of trips that flow through these edges.</p>
+<p><a href="#fig-top-routes" class="quarto-xref">Figure&nbsp;23</a> shows the top 5 generated routes for the trip pairs. Where <em>u</em> and <em>v</em> are the edge IDs and <em>count</em> is the number of trips that flow through these edges of the network.</p>
+<div id="fig-generated-trips-per-route" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-generated-trips-per-route-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="./resources/3_2_trips.png" class="lightbox" data-gallery="quarto-lightbox-gallery-24" title="Figure&nbsp;24: Generated Trips per Route"><img src="./resources/3_2_trips.png" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-generated-trips-per-route-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;24: Generated Trips per Route
+</figcaption>
+</figure>
+</div>
+<div id="fig-count-of-trips-per-route" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-count-of-trips-per-route-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="./resources/3_2_count.png" class="lightbox" data-gallery="quarto-lightbox-gallery-25" title="Figure&nbsp;25: Count of Trips per Route"><img src="./resources/3_2_count.png" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-count-of-trips-per-route-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;25: Count of Trips per Route
+</figcaption>
+</figure>
+</div>
+<p><a href="#fig-generated-trips-per-route" class="quarto-xref">Figure&nbsp;24</a> and <a href="#fig-count-of-trips-per-route" class="quarto-xref">Figure&nbsp;25</a> show the generated trips per route and the count of trips per route respectively. This uses the geometry attributes extracted from the OpenStreetMap data. <em>POINT</em> and <em>LINESTRING</em> are used to perform the routing.</p>
 <div id="fig-generated-routes" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-generated-routes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="resources/3_2_generated_routes.png" class="lightbox" data-gallery="quarto-lightbox-gallery-23" title="Figure&nbsp;23: Generated Routes"><img src="resources/3_2_generated_routes.png" class="img-fluid figure-img"></a>
+<a href="./resources/3_2_generated_routes.png" class="lightbox" data-gallery="quarto-lightbox-gallery-26" title="Figure&nbsp;26: Generated Routes"><img src="./resources/3_2_generated_routes.png" class="img-fluid figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-generated-routes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;23: Generated Routes
+Figure&nbsp;26: Generated Routes
 </figcaption>
 </figure>
 </div>
-<p><a href="#fig-generated-routes" class="quarto-xref">Figure&nbsp;23</a> shows the generated routes for the trip pairs on the map.</p>
+<p><a href="#fig-generated-routes" class="quarto-xref">Figure&nbsp;26</a> shows the final generated routes for the trip pairs. Most of them are colored purple, indicating that only a few trips flow through them. But some routes are blue or even green and yellow. This indicates that many trips flow through them.</p>
+<div style="page-break-after: always;"></div>
+<div style="page-break-after: always;"></div>
 </section>
 </section>
 <section id="references" class="level1" data-number="4">
@@ -529,6 +565,12 @@ INSEE. 2022a. <span>“Aggregated.”</span> 2022. <a href="https://www.insee.fr
 </div>
 <div id="ref-inseeCensus" class="csl-entry" role="listitem">
 ———. 2022b. <span>“Census.”</span> 2022. <a href="https://www.insee.fr/fr/statistiques/6544333">https://www.insee.fr/fr/statistiques/6544333</a>.
+</div>
+<div id="ref-osmosis" class="csl-entry" role="listitem">
+OpenStreetMap. 2024. <span>“Osmosis.”</span> 2024. <a href="https://github.com/openstreetmap/osmosis">https://github.com/openstreetmap/osmosis</a>.
+</div>
+<div id="ref-OpenStreetMap" class="csl-entry" role="listitem">
+OpenStreetMap contributors. 2017. <span>“<span class="nocase">Planet dump retrieved from https://planet.osm.org </span>.”</span> <a href="https://www.openstreetmap.org">https://www.openstreetmap.org</a>.
 </div>
 <div id="ref-urssaf" class="csl-entry" role="listitem">
 URSSAF. 2023. <span>“Employeurs.”</span> 2023. <a href="https://open.urssaf.fr/explore/dataset/etablissements-et-effectifs-salaries-au-niveau-commune-x-ape-last/information">https://open.urssaf.fr/explore/dataset/etablissements-et-effectifs-salaries-au-niveau-commune-x-ape-last/information</a>.
