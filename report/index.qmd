@@ -34,7 +34,7 @@ bibliography: references.bib
 date: last-modified
 number-sections: true
 link-citations: true
-execute: 
+execute:
   eval: true
   echo: true
   output: true
@@ -47,7 +47,7 @@ This report conducts an agent-based transport simulation in France. The study ar
 
 # Region
 
-The chosen *department* in France outside the Île-de-France region is Calvados with the ID *14* in the INSEE Census dataset.
+The chosen _department_ in France outside the Île-de-France region is Calvados with the ID _14_ in the INSEE Census dataset.
 
 ## Study Area
 
@@ -60,6 +60,7 @@ The chosen *department* in France outside the Île-de-France region is Calvados 
 @fig-map-of-study-area shows the map of France with the Calvados department highlighted in blue. Calvados is located in the northwest of France.
 
 {{< pagebreak >}}
+
 ## Territorial Analysis I
 
 ![Age Distribution](./resources/1_2_age_distribution.png){#fig-age-distribution}
@@ -68,14 +69,14 @@ The chosen *department* in France outside the Île-de-France region is Calvados 
 
 ![Age per Municipality](./resources/1_2_age_per_mun.png){#fig-age-per-mun}
 
-@fig-age-per-mun shows the age distribution per municipality ranging from about *38* to about *54* years (see the scale on the right). Since many municipalities are grouped together as the "ZZZZZ" municipality, there are white gaps in the map. The red line marks the silhouette of the Calvados department. The age distribution is quite different between the municipalities:
+@fig-age-per-mun shows the age distribution per municipality ranging from about _38_ to about _54_ years (see the scale on the right). Since many municipalities are grouped together as the "ZZZZZ" municipality, there are white gaps in the map. The red line marks the silhouette of the Calvados department. The age distribution is quite different between the municipalities:
 
-- **14327**: *38.80* (youngest)
-- **14715**: *53.34* (oldest)
+- **14327**: _38.80_ (youngest)
+- **14715**: _53.34_ (oldest)
 
 ![Socio-Professional Distribution](./resources/1_2_csp_distribution.png){#fig-csp-distribution}
 
-@fig-csp-distribution shows the socio-professional distribution of the population. With over *200k* people, "Autres" is the largest group, followed by "Retraités". "Agriculteurs" is the smallest group with only about *5k* people.
+@fig-csp-distribution shows the socio-professional distribution of the population. With over _200k_ people, "Autres" is the largest group, followed by "Retraités". "Agriculteurs" is the smallest group with only about _5k_ people.
 
 ![Socio-Professional Distribution in *14327*](./resources/1_2_csp_distribution_14327.png){#fig-csp-distribution-14327}
 
@@ -83,27 +84,29 @@ The chosen *department* in France outside the Île-de-France region is Calvados 
 
 ![Socio-Professional Distribution in *14762*](./resources/1_2_csp_distribution_14762.png){#fig-csp-distribution-14762}
 
-@fig-csp-distribution-14327, @fig-csp-distribution-14715 and @fig-csp-distribution-14762 show the socio-professional distribution for municipalities *14327*, *14715* and *14762* respectively. All figures are quite different from the overall distribution (@fig-csp-distribution). In *14327*, the gap between "Autres" and "Retraités" is larger than in the overall distribution and there are no "Agriculteurs". In comparison, in *14715*, there are more "Retraités" than "Autres" making them the largest group, again there are no "Agriculteurs". In *14762* the "Retraités" are the largest group, followed by "Autres" and "Ouvriers", which again differs from the overall distribution.
+@fig-csp-distribution-14327, @fig-csp-distribution-14715 and @fig-csp-distribution-14762 show the socio-professional distribution for municipalities _14327_, _14715_ and _14762_ respectively. All figures are quite different from the overall distribution (@fig-csp-distribution). In _14327_, the gap between "Autres" and "Retraités" is larger than in the overall distribution and there are no "Agriculteurs". In comparison, in _14715_, there are more "Retraités" than "Autres" making them the largest group, again there are no "Agriculteurs". In _14762_ the "Retraités" are the largest group, followed by "Autres" and "Ouvriers", which again differs from the overall distribution.
 
 {{< pagebreak >}}
+
 ## Territorial Analysis II
 
 ![Working Population Distribution](./resources/1_3_working_population.png){#fig-working-population}
 
-@fig-working-population shows the distribution of the working population by municipality. For this figure, the "ZZZZZ" municipality has been excluded again, as it is not a real municipality and would therefore negatively affect the results. For the remaining *17* municipalities, the total working population is ~**113k**. Municipality *1418* stands out immediately with a working population of over *45k*, which is about *40%* of the total working population. The rest is more evenly distributed with the smallest working population in municipality *14715* with ~*1.8k*.
+@fig-working-population shows the distribution of the working population by municipality. For this figure, the "ZZZZZ" municipality has been excluded again, as it is not a real municipality and would therefore negatively affect the results. For the remaining _17_ municipalities, the total working population is ~**113k**. Municipality _1418_ stands out immediately with a working population of over _45k_, which is about _40%_ of the total working population. The rest is more evenly distributed with the smallest working population in municipality _14715_ with ~_1.8k_.
 
 ![Employees per Municipality](./resources/1_3_employees_by_mun.png){#fig-employees-by-mun}
 
-@fig-employees-by-mun shows the number of employees per municipality. In contrast to @fig-working-population, the focus is on the job market. For example, if a person travels to another municipality to work, he is counted in the working population of the municipality where he lives, but in the employees of the municipality where he works. All in all, the two figures look quite similar, but some municipalities are shifted one or two places in their rankings. Only municipality *14118* has significantly more employees than working population, which is due to the fact that many people from other municipalities work there.
+@fig-employees-by-mun shows the number of employees per municipality. In contrast to @fig-working-population, the focus is on the job market. For example, if a person travels to another municipality to work, he is counted in the working population of the municipality where he lives, but in the employees of the municipality where he works. All in all, the two figures look quite similar, but some municipalities are shifted one or two places in their rankings. Only municipality _14118_ has significantly more employees than working population, which is due to the fact that many people from other municipalities work there.
 
 ![Difference between Working Population and Employees](./resources/1_3_diff_by_mun.png){#fig-diff-by-mun}
 
 @fig-diff-by-mun shows a map with the net difference ($\text{working population} - \text{employees}$) per municipality:
 
-- **14437**: ~*-5795.92* (largest deficit)
-- **14118**: ~*10351.57* (largest surplus)
+- **14437**: ~_-5795.92_ (largest deficit)
+- **14118**: ~_10351.57_ (largest surplus)
 
 {{< pagebreak >}}
+
 # Trip
 
 ## Production
@@ -116,9 +119,10 @@ A total of **98841.5523660502** trips are generated for the Calvados department.
 
 ![Generated Trips per IRIS](./resources/2_1_trips_map.png){#fig-trips-map}
 
-@fig-trips-map shows the generated trips per IRIS. The municipality boundaries are shown in red and the number of trips is indicated by the area color of each municipality. A closer looks reveals that the municipalities colored in @fig-diff-by-mun are the ones colored here. Municipality *14118* clearly stands out with the most trips as it is colored in red.
+@fig-trips-map shows the generated trips per IRIS. The municipality boundaries are shown in red and the number of trips is indicated by the area color of each municipality. A closer looks reveals that the municipalities colored in @fig-diff-by-mun are the ones colored here. Municipality _14118_ clearly stands out with the most trips as it is colored in red.
 
 {{< pagebreak >}}
+
 ## Attraction
 
 $$
