@@ -152,7 +152,7 @@ In preparation for trip distribution, the demand is scaled to match the total nu
 
 ![Top 10 Pairs with largest Flows](./resources/2_3_largest_flows.png){#fig-largest-flows}
 
-@fig-largest-flows XXX TODO: NAME THEM XXX
+@fig-largest-flows shows the top 10 flows between municipalities, where the origin and destination municipalities are the same, indicating intra-municipality flows. The values range from approximately *14k* to *21.5k*, likely reflecting internal movements.
 
 {{< pagebreak >}}
 # Simulation
