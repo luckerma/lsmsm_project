@@ -43,7 +43,7 @@ execute:
   include: true
 ---
 
-This report conducts an agent-based transport simulation in France. The study area is Calvados, a department in the Normandy region. The simulation is based on the production-attraction-distribution model. The data sources are INSEE Census [@inseeCensus], IGN [@ign], INSEE Aggregated [@inseeAggregated], URSSAF [@urssaf] and Geofabrik [@geofabrik]. Before the simulation, which consists of disaggregation and routing, a territorial analysis is performed and the necessary trips are generated.
+This report conducts an agent-based transport simulation in France. The study area is Calvados, a department in the Normandie region. The simulation is based on the production-attraction-distribution model. The data sources are INSEE Census [@inseeCensus], IGN [@ign], INSEE Aggregated [@inseeAggregated], URSSAF [@urssaf] and Geofabrik [@geofabrik]. Before the simulation, which consists of disaggregation and routing, a territorial analysis is performed and the necessary trips are generated.
 
 # Region
 
