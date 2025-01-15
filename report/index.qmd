@@ -43,7 +43,7 @@ execute:
   include: true
 ---
 
-This report conducts an agent-based transport simulation in France. The study area is Calvados, a department in the Normandy region. The simulation is based on the production-attraction-distribution model. The data sources include the INSEE Census [@inseeCensus], IGN [@ign], INSEE Aggregated [@inseeAggregated], URSSAF [@urssaf] and Geofabrik [@geofabrik]. Before the simulation, which consists of disaggregation and routing, a territorial analysis is carried out and the necessary trips are generated.
+This report conducts an agent-based transport simulation in France. The study area is Calvados, a department in the Normandy region. The simulation is based on the production-attraction-distribution model. The data sources are INSEE Census [@inseeCensus], IGN [@ign], INSEE Aggregated [@inseeAggregated], URSSAF [@urssaf] and Geofabrik [@geofabrik]. Before the simulation, which consists of disaggregation and routing, a territorial analysis is performed and the necessary trips are generated.
 
 # Region
 
@@ -51,52 +51,52 @@ The chosen *department* in France outside the Île-de-France region is Calvados 
 
 ## Study Area
 
-1. The length of the dataframe for this department is **171834**. Where each row represents an observation.
-2. The weighted sum is **695131.5553559497**. Which stands for the total population in the department.
-3. The dataframe has **18** municipalities: ['ZZZZZ' '14047' '14225' '14271' '14174' '14258' '14167' '14327' '14715' '14333' '14301' '14341' '14437' '14181' '14366' '14488' '14762' '14118']. But after subtracting the 'ZZZZZ' municipality, there are **17** left.
+1. The length of the dataframe for this department is **171834**. Each row represents one observation.
+2. The weighted sum is **695131.5553559497**. Which represents the total population of the department.
+3. The dataframe has **18** municipalities: ['ZZZZZ' '14047' '14225' '14271' '14174' '14258' '14167' '14327' '14715' '14333' '14301' '14341' '14437' '14181' '14366' '14488' '14762' '14118']. But after excluding the 'ZZZZZ' municipality, there are **17** left.
 
-![Map of Calvados inside France](resources/1_1_map_of_study_area.png){#fig-map-of-study-area}
+![Map of Calvados within France](./resources/1_1_map_of_study_area.png){#fig-map-of-study-area}
 
-@fig-map-of-study-area shows the map of France with the Calvados department highlighted in blue.
+@fig-map-of-study-area shows the map of France with the Calvados department highlighted in blue. Calvados is located in the northwest of France.
 
 ## Territorial Analysis I
 
-![Age Distribution](resources/1_2_age_distribution.png){#fig-age-distribution}
+![Age Distribution](./resources/1_2_age_distribution.png){#fig-age-distribution}
 
-@fig-age-distribution shows the age distribution of the population, with *43* as the average age.
+@fig-age-distribution shows the age distribution of the population, with **43** as the average age.
 
-![Age per Municipality](resources/1_2_age_per_mun.png){#fig-age-per-mun}
+![Age per Municipality](./resources/1_2_age_per_mun.png){#fig-age-per-mun}
 
-@fig-age-per-mun shows the age distribution per municipality ranging from about *38* to about *54* years (see the scale on the right):
+@fig-age-per-mun shows the age distribution per municipality ranging from about *38* to about *54* years (see the scale on the right). Since many municipalities are grouped together as the "ZZZZZ" municipality, there are white gaps in the map. The red line marks the silhouette of the Calvados department. The age distribution is quite different between the municipalities:
 
 - **14327**: *38.80* (youngest)
 - **14715**: *53.34* (oldest)
 
-![Socio-Professional Distribution](resources/1_2_csp_distribution.png){#fig-csp-distribution}
+![Socio-Professional Distribution](./resources/1_2_csp_distribution.png){#fig-csp-distribution}
 
 @fig-csp-distribution shows the socio-professional distribution of the population. With over *200k* people, "Autres" is the largest group, followed by "Retraités". "Agriculteurs" is the smallest group with only about *5k* people.
 
-![Socio-Professional Distribution in *14327*](resources/1_2_csp_distribution_14327.png){#fig-csp-distribution-14327}
+![Socio-Professional Distribution in *14327*](./resources/1_2_csp_distribution_14327.png){#fig-csp-distribution-14327}
 
-![Socio-Professional Distribution in *14715*](resources/1_2_csp_distribution_14715.png){#fig-csp-distribution-14715}
+![Socio-Professional Distribution in *14715*](./resources/1_2_csp_distribution_14715.png){#fig-csp-distribution-14715}
 
-![Socio-Professional Distribution in *14762*](resources/1_2_csp_distribution_14762.png){#fig-csp-distribution-14762}
+![Socio-Professional Distribution in *14762*](./resources/1_2_csp_distribution_14762.png){#fig-csp-distribution-14762}
 
-@fig-csp-distribution-14327, @fig-csp-distribution-14715 and @fig-csp-distribution-14762 show the socio-professional distribution for the municipalities *14327*, *14715* and *14762* respectively. All of the figures are quite different to the overall distribution (@fig-csp-distribution). In *14327*, the gap between "Autres" and "Retraités" is bigger than in the overall distribution, furthermore there are no "Agriculteurs". In comparison in *14715*, there are more "Retraités" than "Autres" making them the biggest group, again there are no "Agriculteurs". In *14762* the "Retraités" are the biggest group, followed by "Autres" and "Ouvriers", which again differs from the overall distribution.
+@fig-csp-distribution-14327, @fig-csp-distribution-14715 and @fig-csp-distribution-14762 show the socio-professional distribution for municipalities *14327*, *14715* and *14762* respectively. All figures are quite different from the overall distribution (@fig-csp-distribution). In *14327*, the gap between "Autres" and "Retraités" is larger than in the overall distribution and there are no "Agriculteurs". In comparison, in *14715*, there are more "Retraités" than "Autres" making them the largest group, again there are no "Agriculteurs". In *14762* the "Retraités" are the largest group, followed by "Autres" and "Ouvriers", which again differs from the overall distribution.
 
 ## Territorial Analysis II
 
-![Working Population Distribution](resources/1_3_working_population.png){#fig-working-population}
+![Working Population Distribution](./resources/1_3_working_population.png){#fig-working-population}
 
-@fig-working-population shows the working population distribution by municipality. For this figure the "ZZZZZ" municipality was excluded as it is not a real municipality, so it would adversely affect the results. For the *17* remaining municipalities, the sum of the working population is *~113k*. Municipality *1418* directly catches the eye with a working population of over *45k*, which is around *40%* of the total working population. The rest is more evenly distributed with the smallest working population in municipality *14715* with *~1.8k*.
+@fig-working-population shows the distribution of the working population by municipality. For this figure, the "ZZZZZ" municipality has been excluded again, as it is not a real municipality and would therefore negatively affect the results. For the remaining *17* municipalities, the total working population is ~**113k**. Municipality *1418* stands out immediately with a working population of over *45k*, which is about *40%* of the total working population. The rest is more evenly distributed with the smallest working population in municipality *14715* with ~*1.8k*.
 
-![Employees per Municipality](resources/1_3_employees_by_mun.png){#fig-employees-by-mun}
+![Employees per Municipality](./resources/1_3_employees_by_mun.png){#fig-employees-by-mun}
 
-@fig-employees-by-mun shows the number of employees per municipality. In comparison to @fig-working-population, the focus is on the job market. For example if a person travels to another municipality for work, they are counted in the working population of the municipality they live in, but in the employees of the municipality they work in. 
+@fig-employees-by-mun shows the number of employees per municipality. In contrast to @fig-working-population, the focus is on the job market. For example, if a person travels to another municipality to work, he is counted in the working population of the municipality where he lives, but in the employees of the municipality where he works. All in all, the two figures look quite similar, but some municipalities are shifted one or two places in their rankings. Only municipality *14118* has significantly more employees than working population, which is due to the fact that many people from other municipalities work there.
 
-![Difference between Working Population and Employees](resources/1_3_diff_by_mun.png){#fig-diff-by-mun}
+![Difference between Working Population and Employees](./resources/1_3_diff_by_mun.png){#fig-diff-by-mun}
 
-@fig-diff-by-mun shows a map indicating the net difference between the working population and the number of employees per municipality:
+@fig-diff-by-mun shows a map with the net difference ($\text{working population} - \text{employees}$) per municipality:
 
 - **14437**: ~*-5795.92* (largest deficit)
 - **14118**: ~*10351.57* (largest surplus)
@@ -107,13 +107,13 @@ The chosen *department* in France outside the Île-de-France region is Calvados 
 
 A total of **98841.5523660502** trips are generated for the Calvados department.
 
-![Generated Trips per CSP](resources/2_1_generated_trips.png){#fig-generated-trips}
+![Generated Trips per CSP](./resources/2_1_generated_trips.png){#fig-generated-trips}
 
-@fig-generated-trips shows the generated trips per socio-professional category.
+@fig-generated-trips shows the generated trips per socio-professional category in descending order. The "Employés" category has the most trips with **~27.7k**, closely followed by the "Intermédiaires" category with **~27.4k** trips. The "Agriculteurs" and the "Autres" categories have the fewest trips with **~138** and **0** respectively.
 
-![Generated Trips per IRIS](resources/2_1_trips_map.png){#fig-trips-map}
+![Generated Trips per IRIS](./resources/2_1_trips_map.png){#fig-trips-map}
 
-@fig-trips-map shows the generated trips per IRIS.
+@fig-trips-map shows the generated trips per IRIS. The municipality boundaries are shown in red and the number of trips is indicated by the area color of each municipality. A closer looks reveals that the municipalities colored in @fig-diff-by-mun are the ones colored here. Municipality *14118* clearly stands out with the most trips as it is colored in red.
 
 ## Attraction
 
@@ -123,56 +123,68 @@ $$ {#eq-n-value}
 
 @eq-n-value calculates the total number of commuters: **69189.08665623513**.
 
-![Arriving Trips for each Municipality](resources/2_2_arriving_trips.png){#fig-arriving-trips}
+![Arriving Trips for each Municipality](./resources/2_2_arriving_trips.png){#fig-arriving-trips}
 
-@fig-arriving-trips shows the arriving trips for each municipality.
+@fig-arriving-trips shows the arriving trips for each municipality. This is similar to @fig-trips-map, but the focus is on the arriving trips. Again, the municipality *14118* stands out with the most arriving trips.
+
+![Scaled Demand](./resources/2_2_scaled_demand.png){#fig-scaled-demand}
+
+In preparation for trip distribution, the demand is scaled to match the total number of commuters. @fig-scaled-demand shows the scaled demand for each municipality.
 
 ## Distribution
 
-![Distance Matrix](resources/2_3_distance_matrix.png){#fig-distance-matrix}
+![Distance Matrix](./resources/2_3_distance_matrix.png){#fig-distance-matrix}
 
-@fig-distance-matrix shows the distance matrix between the municipalities.
+@fig-distance-matrix shows the distance in meters between each pair of municipalities, with higher values representing more distant municipalities. The diagonal values (distance from a municipality to itself) are zero.
 
-![Friction Matrix](resources/2_3_friction_matrix.png){#fig-friction-matrix}
+![Friction Matrix](./resources/2_3_friction_matrix.png){#fig-friction-matrix}
 
-@fig-friction-matrix shows the friction matrix between the municipalities.
+@fig-friction-matrix represents the resistance effect based on the distance between the municipalities, where higher values indicate lower resistance (closer proximity) and lower values correspond to higher resistance for longer distances.
 
-![Flow Matrix](resources/2_3_flow_matrix.png){#fig-flow-matrix}
+![Flow Matrix](./resources/2_3_flow_matrix.png){#fig-flow-matrix}
 
-![Top 10 Pairs with largest Flows](resources/2_3_largest_flows.png){#fig-largest-flows}
+@fig-flow-matrix shows the estimated flows between municipalities based on origin, destination and friction. Higher values indicate stronger flows between certain pairs of municipalities.
 
-@fig-largest-flows shows the top 10 pairs with the largest flows.
+![Top 10 Pairs with largest Flows](./resources/2_3_largest_flows.png){#fig-largest-flows}
 
-XXX TODO: NAME THEM XXX
+@fig-largest-flows XXX TODO: NAME THEM XXX
 
 # Simulation
 
 ## Disaggregation
 
-![Generated Trip Pairs](resources/3_1_generated_trip_paris.png){#fig-generated-trip-pairs}
+![Generated Trip Pairs](./resources/3_1_generated_trip_paris.png){#fig-generated-trip-pairs}
 
-@fig-generated-trip-pairs shows the generated trip pairs, connecting origin and destination with a line.
+@fig-generated-trip-pairs shows the generated trip pairs, connecting origin and destination with a red line.
 
-![Departure Time Distribution](resources/3_1_departure_times.png){#fig-departure-times}
+![Departure Time Distribution](./resources/3_1_departure_times.png){#fig-departure-times}
 
-![Departure Time CDF](resources/3_1_departure_times_cdf.png){#fig-departure-times-cdf}
+![Departure Time CDF](./resources/3_1_departure_times_cdf.png){#fig-departure-times-cdf}
 
-@fig-departure-times shows the distribution of departure times, while @fig-departure-times-cdf shows the cumulative distribution function of the departure times.
+@fig-departure-times shows the distribution of departure times, while @fig-departure-times-cdf shows the cumulative distribution function of departure times. The departure times follow a normal distribution with a peak around *8:00* and the first and last trips around *4:00* and *12:00* respectively.
 
 ## Routing
 
-![Route Network](resources/3_2_route_network.png){#fig-route-network}
+![Route Network](./resources/3_2_route_network.png){#fig-route-network}
 
-@fig-route-network shows the extracted OpenStreetMap route network for the Calvados department.
+@fig-route-network shows the extracted OpenStreetMap [@OpenStreetMap] route network for the Calvados department using the Osmosis tool [@osmosis].
 
-![Top 5 Generated Routes](resources/3_2_top_routes.png){#fig-top-routes}
+![Top 5 Generated Routes](./resources/3_2_top_routes.png){#fig-top-routes}
 
-@fig-top-routes shows the top 5 generated routes for the trip pairs. As "u" and "v" are the edge IDs and "count" is the number of trips that flow through these edges.
+@fig-top-routes shows the top 5 generated routes for the trip pairs. Where *u* and *v* are the edge IDs and *count* is the number of trips that flow through these edges of the network.
 
-![Generated Routes](resources/3_2_generated_routes.png){#fig-generated-routes}
+![Generated Trips per Route](./resources/3_2_trips.png){#fig-generated-trips-per-route}
 
-@fig-generated-routes shows the generated routes for the trip pairs on the map.
+![Count of Trips per Route](./resources/3_2_count.png){#fig-count-of-trips-per-route}
 
+@fig-generated-trips-per-route and @fig-count-of-trips-per-route show the generated trips per route and the count of trips per route respectively. This uses the geometry attributes extracted from the OpenStreetMap data. *POINT* and *LINESTRING* are used to perform the routing.
+
+![Generated Routes](./resources/3_2_generated_routes.png){#fig-generated-routes}
+
+@fig-generated-routes shows the final generated routes for the trip pairs. Most of them are colored purple, indicating that only a few trips flow through them. But some routes are blue or even green and yellow. This indicates that many trips flow through them.
+
+{{< pagebreak >}}
+{{< pagebreak >}}
 # References
 
 ::: {#refs}
