@@ -92,7 +92,7 @@ The chosen _department_ in France outside the Île-de-France region is Calvados 
 
 ![Working Population Distribution](./resources/1_3_working_population.png){#fig-working-population}
 
-@fig-working-population shows the distribution of the working population by municipality. For this figure, the "ZZZZZ" municipality has been excluded again, as it is not a real municipality and would therefore negatively affect the results. For the remaining _17_ municipalities, the total working population is ~**113k**. Municipality _1418_ stands out immediately with a working population of over _45k_, which is about _40%_ of the total working population. The rest is more evenly distributed with the smallest working population in municipality _14715_ with ~_1.8k_.
+@fig-working-population shows the distribution of the working population by municipality. For this figure, the "ZZZZZ" municipality has been excluded again, as it is not a real municipality and would therefore negatively affect the results. For the remaining _17_ municipalities, the total working population is ~**113k**. Municipality _14181_ stands out immediately with a working population of over _45k_, which is about _40%_ of the total working population. The rest is more evenly distributed with the smallest working population in municipality _14715_ with ~_1.8k_.
 
 ![Employees per Municipality](./resources/1_3_employees_by_mun.png){#fig-employees-by-mun}
 
